@@ -1,5 +1,6 @@
 package xyz.lfans.leetcode.top.interview.questions.easy.array;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,8 +13,18 @@ import java.util.Map;
  */
 public class A24 {
 
-
     public boolean containsDuplicate(int[] nums) {
+        if (nums==null||nums.length<2)
+            return false;
+        Arrays.sort(nums);
+        for (int i = 0;i<nums.length-1;i++){
+            if (nums[i]==nums[i+1])
+                return true;
+        }
+        return false;
+    }
+
+    /*public boolean containsDuplicate(int[] nums) {
         Map<Integer, Integer> map = new HashMap();
         for (int i =0;i<nums.length;i++){
             if (map.get(nums[i])==null){
@@ -21,5 +32,5 @@ public class A24 {
             }else return true;
         }
         return false;
-    }
+    }*/
 }

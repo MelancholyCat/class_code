@@ -14,9 +14,9 @@ public class A24Test {
     @Test
     public void containsDuplicate() {
         A24 a24 =new A24();
-//        int[] arrs= new int[]{1,2,3,1};
+        int[] arrs= new int[]{1,2,3,1};
 //        int[] arrs= new int[]{1,2,3,4};
-        int[] arrs= new int[]{1,1,1,3,3,4,3,2,4,2};
+//        int[] arrs= new int[]{1,1,1,3,3,4,3,2,4,2};
         boolean b = a24.containsDuplicate(arrs);
         System.out.println(b);
     }
